@@ -111,7 +111,9 @@ but Python and Node installed.
 
 ## Running it locally
 
-You'll need Python 3.11 or newer and Node 20+. On macOS, LightGBM also needs OpenMP
+Install [Git LFS](https://git-lfs.com) before cloning (`git lfs install`), because
+`datasets/atm_transactions/lagos_transactions.csv` is stored with it. Without LFS you get a small
+pointer file instead of the data. You'll need Python 3.11 or newer and Node 20+. On macOS, LightGBM also needs OpenMP
 (`brew install libomp`).
 
 ```bash
