@@ -1,0 +1,33 @@
+tiers:
+  Low:
+    min_score: 0.0
+    max_score: 0.3
+    response: "monitor-only"
+    autonomous_action: false
+    notify_bank: false
+    notify_police: false
+  
+  Medium:
+    min_score: 0.3
+    max_score: 0.6
+    response: "notify-bank"
+    autonomous_action: false
+    notify_bank: true
+    notify_police: false
+    
+  High:
+    min_score: 0.6
+    max_score: 0.85
+    response: "notify-bank-police"
+    autonomous_action: false
+    notify_bank: true
+    notify_police: true
+    
+  Critical:
+    min_score: 0.85
+    max_score: 1.0
+    response: "escalate-sop"
+    autonomous_action: false
+    notify_bank: true
+    notify_police: true
+    escalation_required: true

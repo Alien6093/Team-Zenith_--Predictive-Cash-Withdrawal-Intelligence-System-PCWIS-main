@@ -1,0 +1,12 @@
+{
+  "totalComplaints24h": 6997,
+  "totalComplaintsDelta": "+14.6%",
+  "activeFraudNetworks": 63,
+  "activeFraudNetworksDelta": "+6",
+  "muleAccountsFlagged": 345,
+  "muleAccountsFlaggedDelta": "+17",
+  "predictedCashEvents": 17,
+  "predictedCashEventsDelta": "+3",
+  "atRiskCapitalCr": 47.8,
+  "atRiskCapitalDelta": "+3.5 Cr"
+}

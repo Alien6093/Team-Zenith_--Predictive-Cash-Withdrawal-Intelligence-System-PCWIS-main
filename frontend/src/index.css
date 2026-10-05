@@ -1,0 +1,134 @@
+@import "leaflet/dist/leaflet.css";
+@import "tailwindcss";
+@config "../tailwind.config.js";
+
+@layer base {
+  *, ::before, ::after {
+    box-sizing: border-box;
+  }
+  
+  html, body, #root {
+    overflow-x: hidden;
+    max-width: 100vw;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    @apply bg-gov-bg text-gov-text font-sans antialiased;
+  }
+
+  ::selection {
+    @apply bg-gov-navy text-white;
+  }
+
+  /* Force light mode text for form elements in case OS dark mode applies light text to native controls */
+  input, select, textarea {
+    @apply text-gov-text bg-white;
+    color-scheme: light;
+  }
+  
+  input::placeholder, textarea::placeholder {
+    @apply text-gray-500;
+  }
+
+  /* Thin Scrollbar */
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    @apply bg-gray-100;
+  }
+  ::-webkit-scrollbar-thumb {
+    @apply bg-gray-400 rounded-sm;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-gray-500;
+  }
+}
+
+@layer components {
+  .gov-card {
+    @apply bg-gov-card border border-gov-border rounded-sm p-4 shadow-none;
+  }
+
+  .gov-table {
+    @apply w-full border-collapse text-sm text-left;
+  }
+  
+  .gov-table th {
+    @apply uppercase text-[11px] font-bold text-gov-navy bg-gov-bg border border-gov-border px-3 py-2 tracking-wider;
+  }
+  
+  .gov-table td {
+    @apply border border-gov-border px-3 py-2 text-gov-text;
+  }
+  
+  .gov-table tbody tr {
+    @apply transition-colors duration-150;
+  }
+
+  .gov-table tbody tr:hover {
+    @apply bg-blue-50/50;
+  }
+
+  /* Buttons */
+  .gov-btn {
+    @apply inline-flex items-center justify-center px-3 py-1.5 text-xs font-bold uppercase tracking-wider rounded-sm transition-colors focus:outline-none focus:ring-1 focus:ring-gov-navy focus:ring-offset-1 border border-transparent disabled:opacity-50 disabled:cursor-not-allowed;
+  }
+  
+  .gov-btn-primary {
+    @apply bg-gov-navy text-white hover:bg-gov-navy-dark;
+  }
+  
+  .gov-btn-secondary {
+    @apply bg-white border-gov-navy text-gov-navy hover:bg-gray-50;
+  }
+  
+  .gov-btn-danger {
+    @apply bg-gov-red text-white hover:bg-red-800;
+  }
+  
+  .gov-btn-warning {
+    @apply bg-gov-amber text-white hover:bg-amber-800;
+  }
+  
+  .gov-btn-success {
+    @apply bg-gov-green text-white hover:bg-green-800;
+  }
+
+  /* Badges */
+  .gov-badge {
+    @apply inline-flex items-center px-2 py-0.5 rounded-sm text-[10px] font-bold uppercase tracking-widest border;
+  }
+  
+  .gov-badge-critical {
+    @apply bg-red-50 text-gov-red border-red-200;
+  }
+  
+  .gov-badge-warning {
+    @apply bg-amber-50 text-gov-amber border-amber-200;
+  }
+  
+  .gov-badge-success {
+    @apply bg-green-50 text-gov-green border-green-200;
+  }
+  
+  .gov-badge-neutral {
+    @apply bg-gray-100 text-gov-navy border-gray-300;
+  }
+}
+
+/* Leaflet Overrides */
+.leaflet-popup-content-wrapper, .leaflet-popup-tip {
+  @apply bg-white border border-gov-navy shadow-md rounded-sm;
+}
+
+.leaflet-popup-content {
+  @apply font-sans text-sm m-0;
+}
+
+.leaflet-container {
+  @apply font-sans;
+}

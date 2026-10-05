@@ -1,0 +1,9 @@
+thresholds:
+  min_transaction_amount: 1000.0  # Ignore small test transactions under 1000 INR
+  recurring_tx_limit: 5           # Deprioritize sender->receiver pairs exceeding this in 30 days
+
+whitelist_merchants:
+  - "UTILITY_01"
+  - "GOVT_TAX_01"
+  - "AMAZON_PAY_01"
+  - "CRED_01"

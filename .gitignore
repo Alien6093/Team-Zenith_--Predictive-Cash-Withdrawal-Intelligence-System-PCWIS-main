@@ -1,0 +1,26 @@
+# Secrets
+.env
+*.env.local
+
+# Python
+__pycache__/
+*.pyc
+.pytest_cache/
+.venv/
+venv/
+
+# Generated at runtime
+backend/cybercrime.db
+backend/models/
+backend/data/account_pool.json
+
+# Node
+node_modules/
+dist/
+*.log
+
+# Editors / OS
+.DS_Store
+.idea/
+.vscode/*
+!.vscode/extensions.json

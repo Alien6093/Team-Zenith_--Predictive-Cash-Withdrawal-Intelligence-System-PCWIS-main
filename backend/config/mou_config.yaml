@@ -1,0 +1,21 @@
+institutions:
+  I4C:
+    purpose: "Cybercrime Coordination and Predictive Modeling"
+    legal_basis: "Law Enforcement Exemption under DPDP Act"
+    retention_days: 365
+    permitted_recipient_roles: ["Investigator", "Analyst", "Admin"]
+    permitted_fields: ["complaint_id", "loss_amount", "fraud_category", "timestamp", "account_number", "phone_number", "device_id", "upi_id", "sender_account", "receiver_account", "suspect_account", "tx_id", "tx_type", "flag_id", "risk_score", "flagged_reason"]
+  
+  HDFC_Bank:
+    purpose: "Fraud Mitigation and Fund Blocking"
+    legal_basis: "Consent & Contractual Obligation"
+    retention_days: 90
+    permitted_recipient_roles: ["Nodal_Officer", "Fraud_Analyst"]
+    permitted_fields: ["account_number", "phone_number", "device_id", "sender_account", "receiver_account", "amount", "timestamp", "tx_id", "tx_type", "flag_id", "risk_score", "flagged_reason"]
+    
+  SBI:
+    purpose: "Fraud Mitigation and Fund Blocking"
+    legal_basis: "Consent & Contractual Obligation"
+    retention_days: 90
+    permitted_recipient_roles: ["Nodal_Officer", "Fraud_Analyst"]
+    permitted_fields: ["account_number", "phone_number", "device_id", "sender_account", "receiver_account", "amount", "timestamp", "tx_id", "tx_type", "flag_id", "risk_score", "flagged_reason"]

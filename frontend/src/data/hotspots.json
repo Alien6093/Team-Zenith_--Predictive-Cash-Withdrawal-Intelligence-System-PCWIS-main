@@ -1,0 +1,107 @@
+[
+  {
+    "name": "Delhi-NCR",
+    "x": 34,
+    "y": 23,
+    "level": "CRITICAL",
+    "n": 8
+  },
+  {
+    "name": "Mumbai",
+    "x": 20,
+    "y": 67,
+    "level": "HIGH",
+    "n": 3
+  },
+  {
+    "name": "Kolkata",
+    "x": 87,
+    "y": 45,
+    "level": "MEDIUM",
+    "n": 1
+  },
+  {
+    "name": "Bengaluru",
+    "x": 37,
+    "y": 87,
+    "level": "CRITICAL",
+    "n": 8
+  },
+  {
+    "name": "Hyderabad",
+    "x": 38,
+    "y": 70,
+    "level": "CRITICAL",
+    "n": 6
+  },
+  {
+    "name": "Lucknow",
+    "x": 44,
+    "y": 32,
+    "level": "HIGH",
+    "n": 4
+  },
+  {
+    "name": "Chennai",
+    "x": 47,
+    "y": 89,
+    "level": "MEDIUM",
+    "n": 2
+  },
+  {
+    "name": "Pune",
+    "x": 27,
+    "y": 67,
+    "level": "CRITICAL",
+    "n": 7
+  },
+  {
+    "name": "Ahmedabad",
+    "x": 13,
+    "y": 45,
+    "level": "CRITICAL",
+    "n": 7
+  },
+  {
+    "name": "Jaipur",
+    "x": 29,
+    "y": 35,
+    "level": "HIGH",
+    "n": 4
+  },
+  {
+    "name": "Patna",
+    "x": 65,
+    "y": 35,
+    "level": "CRITICAL",
+    "n": 6
+  },
+  {
+    "name": "Bhopal",
+    "x": 42,
+    "y": 52,
+    "level": "HIGH",
+    "n": 4
+  },
+  {
+    "name": "Kochi",
+    "x": 37,
+    "y": 93,
+    "level": "CRITICAL",
+    "n": 8
+  },
+  {
+    "name": "Guwahati",
+    "x": 90,
+    "y": 31,
+    "level": "MEDIUM",
+    "n": 2
+  },
+  {
+    "name": "Surat",
+    "x": 17,
+    "y": 52,
+    "level": "HIGH",
+    "n": 4
+  }
+]

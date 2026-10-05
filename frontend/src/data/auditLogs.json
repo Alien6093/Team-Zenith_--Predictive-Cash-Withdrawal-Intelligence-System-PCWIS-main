@@ -1,0 +1,702 @@
+[
+  {
+    "officer": "ASI. T. Pathak",
+    "badge": "LEA-HYD-314",
+    "ip": "10.86.81.126",
+    "action": "Dispatched Field Unit \u2014 Case CYB-26-XXXXX",
+    "ts": "24 Aug 2026, 10:43:00"
+  },
+  {
+    "officer": "SHO. J. Biswas",
+    "badge": "LEA-KOL-785",
+    "ip": "10.173.48.111",
+    "action": "Triggered Emergency Bank Freeze",
+    "ts": "24 Aug 2026, 08:38:00"
+  },
+  {
+    "officer": "SHO. N. Solanki",
+    "badge": "LEA-MUM-125",
+    "ip": "10.195.74.14",
+    "action": "Viewed Prediction #PRED-2026-XXXXX",
+    "ts": "24 Aug 2026, 08:31:00"
+  },
+  {
+    "officer": "SI. Z. Sidhu",
+    "badge": "LEA-KOL-844",
+    "ip": "10.67.108.188",
+    "action": "Viewed Prediction #PRED-2026-XXXXX",
+    "ts": "24 Aug 2026, 06:47:00"
+  },
+  {
+    "officer": "SHO. R. Prakash",
+    "badge": "LEA-DEL-945",
+    "ip": "10.46.155.228",
+    "action": "Requested CCTV Footage",
+    "ts": "24 Aug 2026, 02:13:00"
+  },
+  {
+    "officer": "SI. A. Nigam",
+    "badge": "LEA-AHM-243",
+    "ip": "10.209.54.66",
+    "action": "Generated Advisory Report",
+    "ts": "23 Aug 2026, 23:30:00"
+  },
+  {
+    "officer": "INS. I. Oak",
+    "badge": "LEA-PUN-554",
+    "ip": "10.194.63.141",
+    "action": "Accessed GNN Entity Graph",
+    "ts": "23 Aug 2026, 22:50:00"
+  },
+  {
+    "officer": "ASI. G. Chaudry",
+    "badge": "LEA-AHM-257",
+    "ip": "10.27.184.1",
+    "action": "Logout \u2014 Session Terminated",
+    "ts": "23 Aug 2026, 22:27:00"
+  },
+  {
+    "officer": "SI. F. Mann",
+    "badge": "LEA-DEL-567",
+    "ip": "10.25.184.181",
+    "action": "Triggered Emergency Bank Freeze",
+    "ts": "23 Aug 2026, 20:16:00"
+  },
+  {
+    "officer": "DSP. V. Bath",
+    "badge": "LEA-PUN-238",
+    "ip": "10.14.88.50",
+    "action": "Triggered Emergency Bank Freeze",
+    "ts": "23 Aug 2026, 18:05:00"
+  },
+  {
+    "officer": "SI. I. Nori",
+    "badge": "LEA-BLR-852",
+    "ip": "10.61.193.11",
+    "action": "Logout \u2014 Session Terminated",
+    "ts": "23 Aug 2026, 15:40:00"
+  },
+  {
+    "officer": "ASI. M. Sangha",
+    "badge": "LEA-CHN-746",
+    "ip": "10.90.160.163",
+    "action": "Viewed Prediction #PRED-2026-XXXXX",
+    "ts": "23 Aug 2026, 13:56:00"
+  },
+  {
+    "officer": "DSP. A. Sami",
+    "badge": "LEA-AHM-304",
+    "ip": "10.49.13.53",
+    "action": "Exported Complaint Register (CSV)",
+    "ts": "23 Aug 2026, 12:05:00"
+  },
+  {
+    "officer": "INS. A. Zacharia",
+    "badge": "LEA-DEL-972",
+    "ip": "10.70.87.85",
+    "action": "Login \u2014 Session Authenticated",
+    "ts": "23 Aug 2026, 10:04:00"
+  },
+  {
+    "officer": "ASI. D. Khatri",
+    "badge": "LEA-AHM-921",
+    "ip": "10.224.92.157",
+    "action": "Logout \u2014 Session Terminated",
+    "ts": "23 Aug 2026, 07:41:00"
+  },
+  {
+    "officer": "ASI. A. Aggarwal",
+    "badge": "LEA-KOL-723",
+    "ip": "10.102.134.213",
+    "action": "Requested CCTV Footage",
+    "ts": "23 Aug 2026, 06:59:00"
+  },
+  {
+    "officer": "SHO. Y. Misra",
+    "badge": "LEA-AHM-252",
+    "ip": "10.46.38.186",
+    "action": "Dispatched Field Unit \u2014 Case CYB-26-XXXXX",
+    "ts": "23 Aug 2026, 05:51:00"
+  },
+  {
+    "officer": "ASI. V. Chada",
+    "badge": "LEA-AHM-147",
+    "ip": "10.32.133.168",
+    "action": "Login \u2014 Session Authenticated",
+    "ts": "23 Aug 2026, 05:10:00"
+  },
+  {
+    "officer": "DSP. S. Murty",
+    "badge": "LEA-BLR-796",
+    "ip": "10.171.45.57",
+    "action": "Login \u2014 Session Authenticated",
+    "ts": "23 Aug 2026, 01:04:00"
+  },
+  {
+    "officer": "SHO. Y. Devi",
+    "badge": "LEA-PUN-748",
+    "ip": "10.219.206.110",
+    "action": "Updated Case Status",
+    "ts": "23 Aug 2026, 00:40:00"
+  },
+  {
+    "officer": "SI. A. Koshy",
+    "badge": "LEA-CHN-519",
+    "ip": "10.234.73.81",
+    "action": "Exported Complaint Register (CSV)",
+    "ts": "22 Aug 2026, 22:30:00"
+  },
+  {
+    "officer": "ASI. V. Mallick",
+    "badge": "LEA-HYD-963",
+    "ip": "10.160.111.52",
+    "action": "Triggered Emergency Bank Freeze",
+    "ts": "22 Aug 2026, 22:17:00"
+  },
+  {
+    "officer": "INS. N. Prakash",
+    "badge": "LEA-HYD-468",
+    "ip": "10.160.218.190",
+    "action": "Dispatched Field Unit \u2014 Case CYB-26-XXXXX",
+    "ts": "22 Aug 2026, 12:18:00"
+  },
+  {
+    "officer": "INS. I. Bahl",
+    "badge": "LEA-PUN-509",
+    "ip": "10.233.139.214",
+    "action": "Logout \u2014 Session Terminated",
+    "ts": "22 Aug 2026, 10:04:00"
+  },
+  {
+    "officer": "SI. T. Karpe",
+    "badge": "LEA-MUM-972",
+    "ip": "10.201.110.118",
+    "action": "Triggered Emergency Bank Freeze",
+    "ts": "22 Aug 2026, 06:31:00"
+  },
+  {
+    "officer": "DSP. G. Gupta",
+    "badge": "LEA-BLR-393",
+    "ip": "10.128.74.215",
+    "action": "Viewed Prediction #PRED-2026-XXXXX",
+    "ts": "22 Aug 2026, 05:25:00"
+  },
+  {
+    "officer": "DSP. P. Tella",
+    "badge": "LEA-PUN-402",
+    "ip": "10.82.20.141",
+    "action": "Updated Case Status",
+    "ts": "22 Aug 2026, 04:56:00"
+  },
+  {
+    "officer": "SI. T. Dugal",
+    "badge": "LEA-HYD-427",
+    "ip": "10.34.44.100",
+    "action": "Requested CCTV Footage",
+    "ts": "22 Aug 2026, 04:52:00"
+  },
+  {
+    "officer": "SHO. G. Bhagat",
+    "badge": "LEA-AHM-949",
+    "ip": "10.115.188.194",
+    "action": "Generated Advisory Report",
+    "ts": "22 Aug 2026, 04:33:00"
+  },
+  {
+    "officer": "ASI. H. Tripathi",
+    "badge": "LEA-CHN-340",
+    "ip": "10.1.6.172",
+    "action": "Dispatched Field Unit \u2014 Case CYB-26-XXXXX",
+    "ts": "22 Aug 2026, 03:18:00"
+  },
+  {
+    "officer": "ASI. E. Handa",
+    "badge": "LEA-AHM-877",
+    "ip": "10.191.28.132",
+    "action": "Exported Complaint Register (CSV)",
+    "ts": "22 Aug 2026, 02:17:00"
+  },
+  {
+    "officer": "SI. A. Oak",
+    "badge": "LEA-BLR-143",
+    "ip": "10.216.40.253",
+    "action": "Logout \u2014 Session Terminated",
+    "ts": "22 Aug 2026, 02:09:00"
+  },
+  {
+    "officer": "INS. D. Kar",
+    "badge": "LEA-CHN-463",
+    "ip": "10.149.191.180",
+    "action": "Dispatched Field Unit \u2014 Case CYB-26-XXXXX",
+    "ts": "21 Aug 2026, 23:27:00"
+  },
+  {
+    "officer": "DSP. M. Tata",
+    "badge": "LEA-PUN-907",
+    "ip": "10.169.190.67",
+    "action": "Generated Advisory Report",
+    "ts": "21 Aug 2026, 23:01:00"
+  },
+  {
+    "officer": "SHO. P. Pandya",
+    "badge": "LEA-PUN-343",
+    "ip": "10.147.24.238",
+    "action": "Logout \u2014 Session Terminated",
+    "ts": "21 Aug 2026, 22:45:00"
+  },
+  {
+    "officer": "SI. S. Pant",
+    "badge": "LEA-HYD-767",
+    "ip": "10.209.10.222",
+    "action": "Viewed Prediction #PRED-2026-XXXXX",
+    "ts": "21 Aug 2026, 22:32:00"
+  },
+  {
+    "officer": "DSP. O. Issac",
+    "badge": "LEA-DEL-254",
+    "ip": "10.49.43.172",
+    "action": "Login \u2014 Session Authenticated",
+    "ts": "21 Aug 2026, 22:14:00"
+  },
+  {
+    "officer": "INS. J. Yadav",
+    "badge": "LEA-AHM-375",
+    "ip": "10.190.10.87",
+    "action": "Accessed GNN Entity Graph",
+    "ts": "21 Aug 2026, 19:08:00"
+  },
+  {
+    "officer": "INS. V. Bhalla",
+    "badge": "LEA-PUN-776",
+    "ip": "10.163.71.185",
+    "action": "Viewed Prediction #PRED-2026-XXXXX",
+    "ts": "21 Aug 2026, 18:23:00"
+  },
+  {
+    "officer": "DSP. A. Rai",
+    "badge": "LEA-AHM-708",
+    "ip": "10.228.90.246",
+    "action": "Updated Case Status",
+    "ts": "21 Aug 2026, 17:57:00"
+  },
+  {
+    "officer": "DSP. W. Varkey",
+    "badge": "LEA-PUN-451",
+    "ip": "10.150.231.207",
+    "action": "Exported Complaint Register (CSV)",
+    "ts": "21 Aug 2026, 16:13:00"
+  },
+  {
+    "officer": "SI. M. Issac",
+    "badge": "LEA-AHM-403",
+    "ip": "10.135.237.13",
+    "action": "Dispatched Field Unit \u2014 Case CYB-26-XXXXX",
+    "ts": "21 Aug 2026, 14:08:00"
+  },
+  {
+    "officer": "DSP. H. Kaul",
+    "badge": "LEA-AHM-617",
+    "ip": "10.203.63.175",
+    "action": "Viewed Prediction #PRED-2026-XXXXX",
+    "ts": "21 Aug 2026, 09:12:00"
+  },
+  {
+    "officer": "ASI. T. Bassi",
+    "badge": "LEA-BLR-733",
+    "ip": "10.205.19.102",
+    "action": "Login \u2014 Session Authenticated",
+    "ts": "21 Aug 2026, 08:48:00"
+  },
+  {
+    "officer": "DSP. E. Kanda",
+    "badge": "LEA-HYD-367",
+    "ip": "10.152.96.39",
+    "action": "Requested CCTV Footage",
+    "ts": "21 Aug 2026, 08:31:00"
+  },
+  {
+    "officer": "SHO. R. Kothari",
+    "badge": "LEA-HYD-233",
+    "ip": "10.82.130.2",
+    "action": "Login \u2014 Session Authenticated",
+    "ts": "21 Aug 2026, 07:48:00"
+  },
+  {
+    "officer": "INS. K. Gaba",
+    "badge": "LEA-PUN-150",
+    "ip": "10.83.109.220",
+    "action": "Triggered Emergency Bank Freeze",
+    "ts": "21 Aug 2026, 06:10:00"
+  },
+  {
+    "officer": "DSP. K. Kala",
+    "badge": "LEA-BLR-827",
+    "ip": "10.91.165.182",
+    "action": "Dispatched Field Unit \u2014 Case CYB-26-XXXXX",
+    "ts": "21 Aug 2026, 04:40:00"
+  },
+  {
+    "officer": "INS. G. Balan",
+    "badge": "LEA-AHM-964",
+    "ip": "10.59.157.201",
+    "action": "Logout \u2014 Session Terminated",
+    "ts": "21 Aug 2026, 04:19:00"
+  },
+  {
+    "officer": "ASI. L. Shanker",
+    "badge": "LEA-MUM-581",
+    "ip": "10.27.36.121",
+    "action": "Triggered Emergency Bank Freeze",
+    "ts": "21 Aug 2026, 03:43:00"
+  },
+  {
+    "officer": "SI. R. Chatterjee",
+    "badge": "LEA-DEL-467",
+    "ip": "10.231.52.158",
+    "action": "Requested CCTV Footage",
+    "ts": "21 Aug 2026, 03:25:00"
+  },
+  {
+    "officer": "DSP. D. Sami",
+    "badge": "LEA-AHM-845",
+    "ip": "10.172.222.228",
+    "action": "Exported Complaint Register (CSV)",
+    "ts": "21 Aug 2026, 02:35:00"
+  },
+  {
+    "officer": "DSP. Y. Garg",
+    "badge": "LEA-PUN-485",
+    "ip": "10.178.235.65",
+    "action": "Triggered Emergency Bank Freeze",
+    "ts": "21 Aug 2026, 00:36:00"
+  },
+  {
+    "officer": "DSP. F. Radhakrishnan",
+    "badge": "LEA-AHM-978",
+    "ip": "10.50.116.35",
+    "action": "Accessed GNN Entity Graph",
+    "ts": "20 Aug 2026, 23:06:00"
+  },
+  {
+    "officer": "SI. N. Dua",
+    "badge": "LEA-MUM-492",
+    "ip": "10.156.85.17",
+    "action": "Viewed Prediction #PRED-2026-XXXXX",
+    "ts": "20 Aug 2026, 22:47:00"
+  },
+  {
+    "officer": "SI. P. Wable",
+    "badge": "LEA-CHN-384",
+    "ip": "10.25.114.141",
+    "action": "Logout \u2014 Session Terminated",
+    "ts": "20 Aug 2026, 20:27:00"
+  },
+  {
+    "officer": "SHO. I. Batta",
+    "badge": "LEA-KOL-118",
+    "ip": "10.2.127.58",
+    "action": "Login \u2014 Session Authenticated",
+    "ts": "20 Aug 2026, 20:01:00"
+  },
+  {
+    "officer": "INS. E. Amble",
+    "badge": "LEA-PUN-147",
+    "ip": "10.63.230.118",
+    "action": "Generated Advisory Report",
+    "ts": "20 Aug 2026, 15:44:00"
+  },
+  {
+    "officer": "ASI. L. Rajan",
+    "badge": "LEA-CHN-868",
+    "ip": "10.96.84.243",
+    "action": "Logout \u2014 Session Terminated",
+    "ts": "20 Aug 2026, 14:25:00"
+  },
+  {
+    "officer": "ASI. A. Padmanabhan",
+    "badge": "LEA-HYD-492",
+    "ip": "10.248.242.10",
+    "action": "Exported Complaint Register (CSV)",
+    "ts": "20 Aug 2026, 14:07:00"
+  },
+  {
+    "officer": "SHO. X. Solanki",
+    "badge": "LEA-AHM-696",
+    "ip": "10.213.146.225",
+    "action": "Logout \u2014 Session Terminated",
+    "ts": "20 Aug 2026, 11:49:00"
+  },
+  {
+    "officer": "SHO. F. Khosla",
+    "badge": "LEA-DEL-983",
+    "ip": "10.66.247.236",
+    "action": "Updated Case Status",
+    "ts": "20 Aug 2026, 10:05:00"
+  },
+  {
+    "officer": "SI. A. Tiwari",
+    "badge": "LEA-AHM-145",
+    "ip": "10.134.225.120",
+    "action": "Accessed GNN Entity Graph",
+    "ts": "20 Aug 2026, 07:08:00"
+  },
+  {
+    "officer": "INS. G. Tak",
+    "badge": "LEA-DEL-646",
+    "ip": "10.102.191.244",
+    "action": "Viewed Prediction #PRED-2026-XXXXX",
+    "ts": "20 Aug 2026, 03:20:00"
+  },
+  {
+    "officer": "ASI. U. Roy",
+    "badge": "LEA-CHN-665",
+    "ip": "10.27.6.191",
+    "action": "Accessed GNN Entity Graph",
+    "ts": "20 Aug 2026, 02:11:00"
+  },
+  {
+    "officer": "INS. P. Dutta",
+    "badge": "LEA-BLR-223",
+    "ip": "10.229.88.243",
+    "action": "Exported Complaint Register (CSV)",
+    "ts": "20 Aug 2026, 00:12:00"
+  },
+  {
+    "officer": "SHO. H. Nayar",
+    "badge": "LEA-CHN-977",
+    "ip": "10.141.234.235",
+    "action": "Viewed Prediction #PRED-2026-XXXXX",
+    "ts": "19 Aug 2026, 23:30:00"
+  },
+  {
+    "officer": "SI. S. Kakar",
+    "badge": "LEA-MUM-570",
+    "ip": "10.227.229.23",
+    "action": "Updated Case Status",
+    "ts": "19 Aug 2026, 21:53:00"
+  },
+  {
+    "officer": "SHO. L. Kapoor",
+    "badge": "LEA-HYD-776",
+    "ip": "10.144.152.61",
+    "action": "Dispatched Field Unit \u2014 Case CYB-26-XXXXX",
+    "ts": "19 Aug 2026, 20:15:00"
+  },
+  {
+    "officer": "SHO. A. Mall",
+    "badge": "LEA-AHM-686",
+    "ip": "10.120.243.77",
+    "action": "Dispatched Field Unit \u2014 Case CYB-26-XXXXX",
+    "ts": "19 Aug 2026, 17:42:00"
+  },
+  {
+    "officer": "SHO. V. Naik",
+    "badge": "LEA-HYD-999",
+    "ip": "10.47.190.209",
+    "action": "Login \u2014 Session Authenticated",
+    "ts": "19 Aug 2026, 12:29:00"
+  },
+  {
+    "officer": "DSP. J. Memon",
+    "badge": "LEA-HYD-846",
+    "ip": "10.213.45.49",
+    "action": "Updated Case Status",
+    "ts": "19 Aug 2026, 11:01:00"
+  },
+  {
+    "officer": "DSP. M. Muni",
+    "badge": "LEA-MUM-609",
+    "ip": "10.9.52.104",
+    "action": "Logout \u2014 Session Terminated",
+    "ts": "19 Aug 2026, 09:56:00"
+  },
+  {
+    "officer": "DSP. Y. Dara",
+    "badge": "LEA-AHM-833",
+    "ip": "10.186.231.30",
+    "action": "Dispatched Field Unit \u2014 Case CYB-26-XXXXX",
+    "ts": "19 Aug 2026, 07:55:00"
+  },
+  {
+    "officer": "DSP. T. Gade",
+    "badge": "LEA-PUN-698",
+    "ip": "10.52.3.131",
+    "action": "Login \u2014 Session Authenticated",
+    "ts": "19 Aug 2026, 04:34:00"
+  },
+  {
+    "officer": "ASI. V. Kamdar",
+    "badge": "LEA-HYD-193",
+    "ip": "10.198.94.95",
+    "action": "Logout \u2014 Session Terminated",
+    "ts": "19 Aug 2026, 03:25:00"
+  },
+  {
+    "officer": "SI. E. Loke",
+    "badge": "LEA-BLR-715",
+    "ip": "10.4.114.65",
+    "action": "Generated Advisory Report",
+    "ts": "19 Aug 2026, 02:33:00"
+  },
+  {
+    "officer": "SI. R. Memon",
+    "badge": "LEA-KOL-811",
+    "ip": "10.4.154.108",
+    "action": "Dispatched Field Unit \u2014 Case CYB-26-XXXXX",
+    "ts": "19 Aug 2026, 02:28:00"
+  },
+  {
+    "officer": "ASI. D. Patil",
+    "badge": "LEA-BLR-215",
+    "ip": "10.67.30.252",
+    "action": "Exported Complaint Register (CSV)",
+    "ts": "19 Aug 2026, 01:25:00"
+  },
+  {
+    "officer": "DSP. V. Dave",
+    "badge": "LEA-PUN-252",
+    "ip": "10.27.5.165",
+    "action": "Exported Complaint Register (CSV)",
+    "ts": "19 Aug 2026, 00:25:00"
+  },
+  {
+    "officer": "SHO. A. Bir",
+    "badge": "LEA-BLR-808",
+    "ip": "10.88.65.27",
+    "action": "Logout \u2014 Session Terminated",
+    "ts": "19 Aug 2026, 00:08:00"
+  },
+  {
+    "officer": "DSP. D. Balay",
+    "badge": "LEA-HYD-528",
+    "ip": "10.207.198.189",
+    "action": "Viewed Prediction #PRED-2026-XXXXX",
+    "ts": "18 Aug 2026, 20:12:00"
+  },
+  {
+    "officer": "INS. L. Lanka",
+    "badge": "LEA-PUN-642",
+    "ip": "10.152.211.14",
+    "action": "Exported Complaint Register (CSV)",
+    "ts": "18 Aug 2026, 19:21:00"
+  },
+  {
+    "officer": "SI. V. Bhargava",
+    "badge": "LEA-AHM-104",
+    "ip": "10.24.221.215",
+    "action": "Generated Advisory Report",
+    "ts": "18 Aug 2026, 18:20:00"
+  },
+  {
+    "officer": "ASI. A. Gandhi",
+    "badge": "LEA-AHM-990",
+    "ip": "10.84.38.193",
+    "action": "Updated Case Status",
+    "ts": "18 Aug 2026, 17:57:00"
+  },
+  {
+    "officer": "DSP. S. Bhatti",
+    "badge": "LEA-BLR-960",
+    "ip": "10.92.150.25",
+    "action": "Updated Case Status",
+    "ts": "18 Aug 2026, 17:29:00"
+  },
+  {
+    "officer": "DSP. S. Dugar",
+    "badge": "LEA-BLR-528",
+    "ip": "10.53.60.73",
+    "action": "Dispatched Field Unit \u2014 Case CYB-26-XXXXX",
+    "ts": "18 Aug 2026, 13:56:00"
+  },
+  {
+    "officer": "SHO. A. Yadav",
+    "badge": "LEA-DEL-708",
+    "ip": "10.24.55.168",
+    "action": "Viewed Prediction #PRED-2026-XXXXX",
+    "ts": "18 Aug 2026, 09:59:00"
+  },
+  {
+    "officer": "ASI. S. Kannan",
+    "badge": "LEA-KOL-666",
+    "ip": "10.31.198.210",
+    "action": "Requested CCTV Footage",
+    "ts": "18 Aug 2026, 08:09:00"
+  },
+  {
+    "officer": "SHO. N. Bhat",
+    "badge": "LEA-KOL-894",
+    "ip": "10.99.150.115",
+    "action": "Exported Complaint Register (CSV)",
+    "ts": "18 Aug 2026, 06:45:00"
+  },
+  {
+    "officer": "SHO. A. Raghavan",
+    "badge": "LEA-HYD-405",
+    "ip": "10.55.246.17",
+    "action": "Login \u2014 Session Authenticated",
+    "ts": "18 Aug 2026, 02:42:00"
+  },
+  {
+    "officer": "SI. S. Varughese",
+    "badge": "LEA-AHM-449",
+    "ip": "10.186.27.210",
+    "action": "Triggered Emergency Bank Freeze",
+    "ts": "18 Aug 2026, 02:27:00"
+  },
+  {
+    "officer": "SHO. A. Rattan",
+    "badge": "LEA-KOL-451",
+    "ip": "10.113.243.233",
+    "action": "Login \u2014 Session Authenticated",
+    "ts": "17 Aug 2026, 20:48:00"
+  },
+  {
+    "officer": "SHO. J. Setty",
+    "badge": "LEA-CHN-452",
+    "ip": "10.83.132.192",
+    "action": "Dispatched Field Unit \u2014 Case CYB-26-XXXXX",
+    "ts": "17 Aug 2026, 19:45:00"
+  },
+  {
+    "officer": "SHO. L. Chanda",
+    "badge": "LEA-PUN-215",
+    "ip": "10.212.76.38",
+    "action": "Generated Advisory Report",
+    "ts": "17 Aug 2026, 19:34:00"
+  },
+  {
+    "officer": "SHO. J. Chatterjee",
+    "badge": "LEA-MUM-208",
+    "ip": "10.51.146.223",
+    "action": "Requested CCTV Footage",
+    "ts": "17 Aug 2026, 19:28:00"
+  },
+  {
+    "officer": "SHO. I. Apte",
+    "badge": "LEA-BLR-226",
+    "ip": "10.187.19.97",
+    "action": "Accessed GNN Entity Graph",
+    "ts": "17 Aug 2026, 18:59:00"
+  },
+  {
+    "officer": "SHO. A. Choudhury",
+    "badge": "LEA-AHM-821",
+    "ip": "10.15.220.242",
+    "action": "Exported Complaint Register (CSV)",
+    "ts": "17 Aug 2026, 17:48:00"
+  },
+  {
+    "officer": "SHO. E. Narayanan",
+    "badge": "LEA-CHN-616",
+    "ip": "10.196.214.251",
+    "action": "Generated Advisory Report",
+    "ts": "17 Aug 2026, 16:01:00"
+  },
+  {
+    "officer": "ASI. Y. Maharaj",
+    "badge": "LEA-BLR-154",
+    "ip": "10.51.169.53",
+    "action": "Triggered Emergency Bank Freeze",
+    "ts": "17 Aug 2026, 14:10:00"
+  }
+]

@@ -1,0 +1,197 @@
+[
+  {
+    "networkId": "FN-8000",
+    "victims": [
+      "V-2181",
+      "V-3519",
+      "V-1389",
+      "V-8523",
+      "V-6434",
+      "V-1620"
+    ],
+    "mule": "MULE-2433-C",
+    "devices": [
+      "IMEI-4492",
+      "IMEI-2702",
+      "IMEI-4368",
+      "IMEI-7950"
+    ],
+    "atms": [
+      "ATM-BLR-913",
+      "ATM-HYD-671"
+    ],
+    "centrality": 0.53,
+    "sharedDeviceConfidence": 74,
+    "ringClassification": "MULTI-HOP DISPERSION"
+  },
+  {
+    "networkId": "FN-8001",
+    "victims": [
+      "V-6183",
+      "V-1276",
+      "V-7381",
+      "V-2938",
+      "V-9762",
+      "V-1096"
+    ],
+    "mule": "MULE-2036-Y",
+    "devices": [
+      "IMEI-8391",
+      "IMEI-7626",
+      "IMEI-7357"
+    ],
+    "atms": [
+      "ATM-DEL-817",
+      "ATM-MUM-466",
+      "ATM-MUM-396",
+      "ATM-HYD-721"
+    ],
+    "centrality": 0.54,
+    "sharedDeviceConfidence": 88,
+    "ringClassification": "COORDINATED BURST PATTERN"
+  },
+  {
+    "networkId": "FN-8002",
+    "victims": [
+      "V-3234",
+      "V-7406",
+      "V-9941",
+      "V-5832"
+    ],
+    "mule": "MULE-3360-J",
+    "devices": [
+      "IMEI-1504",
+      "IMEI-8765",
+      "IMEI-3561"
+    ],
+    "atms": [
+      "ATM-CHN-111",
+      "ATM-BLR-226",
+      "ATM-DEL-105",
+      "ATM-PUN-650"
+    ],
+    "centrality": 0.75,
+    "sharedDeviceConfidence": 65,
+    "ringClassification": "MULTI-HOP DISPERSION"
+  },
+  {
+    "networkId": "FN-8003",
+    "victims": [
+      "V-9397",
+      "V-3333",
+      "V-3637",
+      "V-4014",
+      "V-4617",
+      "V-5140"
+    ],
+    "mule": "MULE-4183-D",
+    "devices": [
+      "IMEI-4469",
+      "IMEI-6633"
+    ],
+    "atms": [
+      "ATM-DEL-971",
+      "ATM-AHM-760"
+    ],
+    "centrality": 0.75,
+    "sharedDeviceConfidence": 78,
+    "ringClassification": "HIGH-VELOCITY FAN-IN"
+  },
+  {
+    "networkId": "FN-8004",
+    "victims": [
+      "V-6851",
+      "V-3100",
+      "V-4842",
+      "V-2639",
+      "V-5671"
+    ],
+    "mule": "MULE-2143-G",
+    "devices": [
+      "IMEI-4234",
+      "IMEI-8982",
+      "IMEI-2608"
+    ],
+    "atms": [
+      "ATM-AHM-561",
+      "ATM-CHN-731",
+      "ATM-HYD-810"
+    ],
+    "centrality": 0.76,
+    "sharedDeviceConfidence": 83,
+    "ringClassification": "MULTI-HOP DISPERSION"
+  },
+  {
+    "networkId": "FN-8005",
+    "victims": [
+      "V-4629",
+      "V-8145",
+      "V-5533",
+      "V-6889"
+    ],
+    "mule": "MULE-3200-V",
+    "devices": [
+      "IMEI-3762",
+      "IMEI-6131",
+      "IMEI-1079"
+    ],
+    "atms": [
+      "ATM-CHN-998",
+      "ATM-AHM-573",
+      "ATM-AHM-467",
+      "ATM-HYD-598"
+    ],
+    "centrality": 0.75,
+    "sharedDeviceConfidence": 71,
+    "ringClassification": "HIGH-VELOCITY FAN-IN"
+  },
+  {
+    "networkId": "FN-8006",
+    "victims": [
+      "V-2252",
+      "V-2235",
+      "V-1305",
+      "V-9309",
+      "V-1511"
+    ],
+    "mule": "MULE-7637-Y",
+    "devices": [
+      "IMEI-9824",
+      "IMEI-3293",
+      "IMEI-4218"
+    ],
+    "atms": [
+      "ATM-KOL-137",
+      "ATM-HYD-656",
+      "ATM-AHM-769",
+      "ATM-BLR-474"
+    ],
+    "centrality": 0.68,
+    "sharedDeviceConfidence": 78,
+    "ringClassification": "LAYERED PASS-THROUGH"
+  },
+  {
+    "networkId": "FN-8007",
+    "victims": [
+      "V-6961",
+      "V-9227",
+      "V-1173",
+      "V-4913",
+      "V-3717",
+      "V-9423"
+    ],
+    "mule": "MULE-3299-O",
+    "devices": [
+      "IMEI-9362",
+      "IMEI-9210",
+      "IMEI-2483"
+    ],
+    "atms": [
+      "ATM-BLR-679",
+      "ATM-BLR-853"
+    ],
+    "centrality": 0.83,
+    "sharedDeviceConfidence": 82,
+    "ringClassification": "HIGH-VELOCITY FAN-IN"
+  }
+]
