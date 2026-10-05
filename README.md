@@ -134,7 +134,7 @@ npm run dev                               # http://localhost:5173
 ```
 
 Secrets live only in the two `.env` files, which are git-ignored. Generate the HMAC and
-JWT keys with `python -c "import secrets; print(secrets.token_hex(32))"`. Google
+JWT keys with `python -c "import secrets; print(secrets.token_hex(32))"`. The backend refuses to start without them, so there are no weak fallback keys. Google
 publishes reCAPTCHA test keys that work fine for a demo. The demo login is
 `admin` / `123`.
 
@@ -160,6 +160,10 @@ patterns without ever touching real financial records. It has no connection to a
 government system, bank, or live data source, and it isn't built to be dropped into
 production as-is. Treat it as a technical exploration of the problem, not a finished
 answer to it.
+
+## License
+
+MIT, see [LICENSE](LICENSE).
 
 ## Credits
 Built by Team Zenith for Smart India Hackathon.

@@ -15,8 +15,22 @@ DB_PATH = _project_root / "cybercrime.db"
 DB_URI = f"sqlite:///{DB_PATH}"
 
 # Security
-HMAC_SECRET_KEY = os.getenv("HMAC_SECRET_KEY", "CHANGE_ME_IN_PRODUCTION")
-JWT_SECRET = os.getenv("JWT_SECRET", "CHANGE_ME_JWT_SECRET_IN_PRODUCTION")
+_PLACEHOLDER_SECRET = "generate_a_64_char_hex_key_here"
+
+
+def _require_secret(name: str) -> str:
+    """Return a secret from the environment, refusing missing or placeholder values."""
+    value = os.getenv(name, "").strip()
+    if not value or value == _PLACEHOLDER_SECRET:
+        raise RuntimeError(
+            f"{name} is not set. Copy backend/.env.example to backend/.env and set it "
+            'to a random value (python -c "import secrets; print(secrets.token_hex(32))").'
+        )
+    return value
+
+
+HMAC_SECRET_KEY = _require_secret("HMAC_SECRET_KEY")
+JWT_SECRET = _require_secret("JWT_SECRET")
 
 # PostGIS connection parameters
 POSTGIS_PARAMS = {
