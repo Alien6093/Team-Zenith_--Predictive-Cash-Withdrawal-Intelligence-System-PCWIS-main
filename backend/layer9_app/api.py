@@ -7,7 +7,7 @@ from datetime import datetime, timezone, timedelta
 from fastapi import FastAPI, HTTPException, Depends, Request
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.security import HTTPBearer, HTTPAuthorizationCredentials
-from pydantic import BaseModel
+from pydantic import BaseModel, Field
 import sqlite3
 from pathlib import Path
 import uvicorn
@@ -21,7 +21,11 @@ load_dotenv()
 
 app = FastAPI(title="Cybercrime Predictive Framework API")
 
-ALLOWED_ORIGINS = os.getenv("CORS_ORIGINS", "http://localhost:5173,http://localhost:3000").split(",")
+ALLOWED_ORIGINS = [
+    origin.strip()
+    for origin in os.getenv("CORS_ORIGINS", "http://localhost:5173,http://localhost:3000").split(",")
+    if origin.strip()
+]
 
 app.add_middleware(
     CORSMiddleware,
@@ -41,6 +45,7 @@ def startup_event():
 def shutdown_event():
     scheduler.shutdown()
 
+RECAPTCHA_TIMEOUT_SECONDS = 5
 JWT_ALGORITHM = "HS256"
 JWT_EXPIRY_HOURS = 8
 security = HTTPBearer()
@@ -90,9 +95,17 @@ def login(req: LoginRequest):
     if not recaptcha_secret:
         raise HTTPException(status_code=500, detail="RECAPTCHA_SECRET_KEY is not configured on the server.")
     verify_url = "https://www.google.com/recaptcha/api/siteverify"
-    resp = requests.post(verify_url, data={"secret": recaptcha_secret, "response": req.captcha_token})
-    
-    if not resp.json().get("success"):
+    try:
+        resp = requests.post(
+            verify_url,
+            data={"secret": recaptcha_secret, "response": req.captcha_token},
+            timeout=RECAPTCHA_TIMEOUT_SECONDS,
+        )
+        captcha_ok = bool(resp.json().get("success"))
+    except (requests.RequestException, ValueError):
+        raise HTTPException(status_code=503, detail="CAPTCHA service is unavailable. Try again shortly.")
+
+    if not captcha_ok:
         raise HTTPException(status_code=403, detail="CAPTCHA verification failed.")
 
     if req.username == "admin" and req.password == "123":
@@ -110,7 +123,12 @@ def get_alerts(username: str = Depends(verify_jwt_token)):
         lines = f.readlines()
     conn = _get_db()
     for line in lines[-100:]:
-        record = json.loads(line.strip())
+        if not line.strip():
+            continue
+        try:
+            record = json.loads(line)
+        except json.JSONDecodeError:
+            continue
         c_id = record['complaint_id']
         candidates = []
         try:
@@ -233,7 +251,7 @@ def get_demo_cases(username: str = Depends(verify_jwt_token)):
     conn.close()
     return {"cases": cases}
 
-@app.get("/api/demo/graph/{case_id:path}")
+@app.get("/api/demo/graph/{case_id}")
 def get_demo_graph(case_id: str, username: str = Depends(verify_jwt_token)):
     conn = _get_db()
     cursor = conn.cursor()
@@ -299,9 +317,9 @@ def get_demo_banks(username: str = Depends(verify_jwt_token)):
     return {"banks": banks}
 
 class AuditRequest(BaseModel):
-    action_category: str
-    target_case_ref: str
-    narrative: str
+    action_category: str = Field(max_length=100)
+    target_case_ref: str = Field(max_length=100)
+    narrative: str = Field(max_length=2000)
 
 @app.post("/api/demo/audit")
 def create_audit_log(req: AuditRequest, request: Request, username: str = Depends(verify_jwt_token)):
@@ -309,7 +327,7 @@ def create_audit_log(req: AuditRequest, request: Request, username: str = Depend
     cursor = conn.cursor()
     
     log_ref = f"DEMO-AUDIT-{random.randint(100000, 999999)}"
-    ts = datetime.now(timezone.utc).isoformat() + "Z"
+    ts = datetime.now(timezone.utc).isoformat().replace("+00:00", "Z")
     
     # Read client IP from request, fallback to dummy
     client_ip = request.client.host if request.client else "10.0.0.1"
@@ -332,4 +350,9 @@ def get_audit_logs(username: str = Depends(verify_jwt_token)):
     return {"logs": logs}
 
 if __name__ == "__main__":
-    uvicorn.run("layer9_app.api:app", host="0.0.0.0", port=8000, reload=True)
+    uvicorn.run(
+        "layer9_app.api:app",
+        host=os.getenv("API_HOST", "127.0.0.1"),
+        port=int(os.getenv("API_PORT", "8000")),
+        reload=os.getenv("API_RELOAD", "1") == "1",
+    )

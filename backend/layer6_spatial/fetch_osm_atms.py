@@ -1,6 +1,6 @@
 import json
 import requests
-from pathlib import Path
+from shared.account_pool import POOL_FILE, get_pool
 
 def fetch_osm_atms():
     # Query Delhi, Mumbai, Bangalore ATMs via Overpass
@@ -60,20 +60,13 @@ def fetch_osm_atms():
         print("No ATMs found, preserving existing data.")
         return
         
-    # Update account_pool.json
-    pool_file = Path(__file__).resolve().parent.parent / "data" / "account_pool.json"
-    if pool_file.exists():
-        with open(pool_file, 'r') as f:
-            pool = json.load(f)
-            
-        pool['atms'] = atms
-        
-        with open(pool_file, 'w') as f:
-            json.dump(pool, f, indent=2)
-            
-        print("Updated account_pool.json with real OSM ATMs.")
-    else:
-        print("account_pool.json not found. Run a producer script first to generate it.")
+    # Update account_pool.json (get_pool() generates it first if it doesn't exist yet)
+    pool = get_pool()
+    pool['atms'] = atms
+    with open(POOL_FILE, 'w') as f:
+        json.dump(pool, f, indent=2)
+
+    print("Updated account_pool.json with real OSM ATMs.")
 
 if __name__ == "__main__":
     fetch_osm_atms()

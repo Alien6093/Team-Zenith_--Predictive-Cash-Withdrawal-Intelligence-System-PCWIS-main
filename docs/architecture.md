@@ -1,6 +1,6 @@
-# Cybercrime Predictive Framework: Context & Technical Report
+# PCWIS Architecture: Technical Report
 
-This document is a layer-by-layer architectural and technical report for the **Cybercrime Predictive Framework** (PCWIS). It describes the stack, what each layer does, and how data flows through the pipeline.
+This document is a layer-by-layer architectural and technical report for the **Predictive Cash-Withdrawal Intelligence System (PCWIS)**. It describes the stack, what each layer does, and how data flows through the pipeline.
 
 ## 1. Tech Stack Overview & Rationale
 
@@ -11,26 +11,32 @@ This document is a layer-by-layer architectural and technical report for the **C
 *   **PostgreSQL with PostGIS**: Enables high-performance geospatial queries (`ST_DWithin`, `ST_Distance`). Crucial for quickly finding candidate ATMs within a geographical radius of a crime location.
 *   **SQLite**: Serves as a local/lightweight storage for predictions and active learning acknowledgments (officer feedback).
 *   **NetworkX & Neo4j**: Powers the graph features (Layer 5). Used to compute network metrics like `in_degree`, `pagerank`, and `is_gateway` which are critical indicators of money muling and withdrawal networks.
-*   **PyJWT**: Handles secure tokenization and API authentication (Layer 1 Governance).
+*   **PyJWT**: Issues and verifies the bearer tokens that protect the API (Layer 9). Identifier tokenization is a separate concern handled in Layer 1 with HMAC.
 
 ### Frontend
 *   **React (Vite)**: The frontend is built using Vite and React, chosen for rapid compilation and modern component-based UI architecture.
-*   **JSON Data Mocks**: Uses structured JSON files (e.g., `auditLogs.json`, `complaints.json`, `hotspots.json`) to hydrate the dashboard with graphs and metrics, illustrating KPIs, complaint trends, and GNN (Graph Neural Network) visualizations.
+*   **Live API data**: The dashboard fetches metrics, cases, ATMs, inter-bank data and the audit log from the FastAPI service. Some demo endpoints (metrics, ATM risk scores, bank figures) include randomised values, so they illustrate the interface rather than report real measurements.
 
 ---
 
 ## 2. Layer-by-Layer Breakdown
 
-The system is structured into 9 modular layers:
+The system is structured into 10 modular layers:
 
 ### Layer 1: Governance (`layer1_governance`)
-Handles system security, tokenization, and auth. Uses JWT to secure the API, ensuring that only authorized officers can query risk predictions or submit feedback.
+Tokenizes every identifier (phone, account, device) with HMAC before it enters the pipeline, tags payloads according to the data-sharing MoU in `config/mou_config.yaml`, and runs the retention job that purges records past their retention window.
 
-### Layer 2 & 3: Behavior & ML Features (`layer2_behavior`, `layer3_ml`)
-Focuses on feature engineering. Translates raw transaction and complaint data into structured ML features.
+### Layer 2: Ingestion (`layer2_ingestion`)
+Producers for complaints, transactions and mule-hunter flags (plus an adversarial generator for stress cases). Events are written to an `events` table in SQLite by `db_writer.py`, which acts as the prototype's event queue.
 
-### Layer 4 & 5: Ensembles & Graph (`layer4_ensembles`, `layer5_graph`)
-Constructs fraud graphs (nodes as accounts/ATMs, edges as transactions). Computes critical network metrics:
+### Layer 3: Validation (`layer3_validation`)
+Pydantic schemas reject malformed payloads, and entity resolution links records that refer to the same underlying account or device.
+
+### Layer 4: Rules (`layer4_rules`)
+A first-pass rule engine configured by `config/rule_config.yaml`. It drops events below the amount threshold, deprioritizes accounts that exceed the recurring-transfer limit, and passes the rest on.
+
+### Layer 5: Graph (`layer5_graph`)
+Constructs fraud graphs (nodes as accounts/ATMs/devices, edges as transactions), using NetworkX by default or Neo4j when configured. Computes critical network metrics:
 *   `in_degree`: Number of suspicious transfers received.
 *   `pagerank`: Centrality of an entity in the illicit flow.
 *   `is_gateway`: Boolean indicating if a node acts as a central distribution/withdrawal point.
@@ -43,11 +49,16 @@ Constructs fraud graphs (nodes as accounts/ATMs, edges as transactions). Compute
 ### Layer 7: Ranking (`layer7_ranking`)
 The core ML prediction layer. 
 *   **Model**: LightGBM trained with the `lambdarank` objective.
-*   **SHAP Integration**: Extracts feature contributions (`pred_contrib=True`) to provide human-readable "Reason Codes" for the predictions (e.g., explaining that an ATM is flagged primarily due to its `pagerank` or `distance_km`).
+*   **Reason codes**: Extracts LightGBM feature contributions (`pred_contrib=True`) to provide human-readable "Reason Codes" for the predictions (e.g., explaining that an ATM is flagged primarily due to its `pagerank` or `distance_km`).
 
-### Layer 8 & 9: Policy & App (`layer8_policy`, `layer9_app`)
-*   **Policy**: Applies business logic thresholds (e.g., mapping scores > 0.7 to "Critical" tier).
-*   **App**: The FastAPI entry point exposing `/predict` endpoints and integrating all underlying layers into a unified HTTP interface.
+### Layer 8: Policy (`layer8_policy`)
+Applies the tiers and recommended actions defined in `config/action_policy.yaml` (e.g., mapping scores above 0.7 to "Critical"). The policy only ever recommends; it never triggers an automatic freeze or dispatch.
+
+### Layer 9: App (`layer9_app`)
+The FastAPI service. It authenticates officers (reCAPTCHA plus JWT), serves the dashboard endpoints under `/api/demo`, and exposes `/api/alerts` for scored complaints.
+
+### Layer 10: Evaluation (`layer10_eval`)
+Logs each prediction against the observed cash-out location and reports ranking metrics such as MRR and distance error to `data/evaluation_logs.jsonl`.
 
 ---
 

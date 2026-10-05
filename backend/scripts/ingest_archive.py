@@ -34,9 +34,9 @@ def ingest_data():
             try:
                 # '1/1/2022 0:03'
                 dt = datetime.strptime(timestamp_raw, '%m/%d/%Y %H:%M')
-                ts = dt.isoformat() + "Z"
+                ts = dt.isoformat()
             except ValueError:
-                ts = datetime.now().isoformat() + "Z"
+                ts = datetime.now().isoformat()
                 
             amount = float(row.get('TransactionAmount', 0.0))
             if amount == 0:

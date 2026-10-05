@@ -48,8 +48,8 @@ testable rather than a single monolithic script:
 
 **Governance and intake.** Every identifier — phone numbers, account numbers, device
 IDs — is tokenized with HMAC before it ever enters the system. Raw personal data never
-touches the pipeline. Transactions and complaints stream in through Redis Streams,
-mimicking the kind of event pipeline a real deployment would need.
+touches the pipeline. Transactions and complaints flow in as events through a queue (SQLite in this
+prototype; a real deployment would use something like Redis Streams).
 
 **Entity and graph analysis.** A Neo4j graph stitches together accounts, devices, and
 known high-risk exit points, tracing how money moves between them and catching cases
@@ -72,12 +72,13 @@ because a number with no baseline and no honest test set isn't really a number.
 ## Stack
 
 Python and FastAPI on the backend, LightGBM and scikit-learn for the model, Neo4j
-for the graph, PostGIS for spatial queries, Redis Streams for ingestion. The
+for the graph, PostGIS for spatial queries, and an event queue for ingestion (SQLite
+in this prototype). The
 frontend is React and Leaflet, rendered on plain OpenStreetMap tiles rather than a
 paid mapping service — partly a cost decision, partly a bet that the map shouldn't be
 the part of the system anyone has to think about.
 
-Neo4j, PostGIS and Redis are optional for a local run. Without them the prototype
+Neo4j and PostGIS are optional for a local run. Without them the prototype
 falls back to NetworkX for the graph, an in-memory ATM pool for candidate generation
 and SQLite for the event queue, so you can see the whole pipeline working with nothing
 but Python and Node installed.
@@ -122,6 +123,7 @@ cp backend/.env.example backend/.env      # then fill in the values
 cd backend
 python generate_synthetic_data.py         # builds the demo SQLite database
 python -m layer7_ranking.train            # trains the first ranking model
+python scripts/auto_generator.py          # seeds the ATM pool and runs the pipeline once
 python -m layer9_app.api                  # API on http://localhost:8000 (docs at /docs)
 ```
 
@@ -136,13 +138,16 @@ npm run dev                               # http://localhost:5173
 Secrets live only in the two `.env` files, which are git-ignored. Generate the HMAC and
 JWT keys with `python -c "import secrets; print(secrets.token_hex(32))"`. The backend refuses to start without them, so there are no weak fallback keys. Google
 publishes reCAPTCHA test keys that work fine for a demo. The demo login is
-`admin` / `123`.
+`admin` / `123` and is hardcoded for the prototype, so replace it with real authentication
+before hosting this anywhere public. Several dashboard figures (some KPIs, bank numbers,
+ATM risk scores) are randomised demo values, not model output.
 
 To push a fresh batch of synthetic events through the whole pipeline and retrain on
 them, run `python scripts/auto_generator.py` from `backend/` (add `--continuous` to
 loop). The optional services start with
 `docker compose --env-file backend/.env up -d`, and `python -m layer6_spatial.fetch_osm_atms`
-loads real OpenStreetMap ATM locations into PostGIS.
+replaces the synthetic ATM list in `backend/data/account_pool.json` with real
+OpenStreetMap locations.
 
 Tests:
 
@@ -168,4 +173,4 @@ MIT, see [LICENSE](LICENSE).
 ## Credits
 Built by Team Zenith for Smart India Hackathon.
 
-Kirti Chauhan
+- Kirti Chauhan
